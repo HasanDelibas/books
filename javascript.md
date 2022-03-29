@@ -17,6 +17,8 @@ console.log( 29 )
 
 console.log( "%d is a number" , 29 )
 
+console.log( " %d + %d = %d " , 2 , 2 , 4  )
+
 ```
 
 ## 0002-Variables
@@ -40,4 +42,46 @@ var object = {
   age: 23
 }
 var bigint = 100000000000000000000000000000000000000n
+```
 
+## Operators
+
+### Arithmetic Operators
+```js
+/*
+  let a is 2
+  let b is 3
+  c = a + b
+*/
+c = a + b
+console.log(b)
+
+/*
+  Addition +
+  Subtraction - 
+  Multiplication *
+  Division / 
+  Modulus % 
+  Increment ++
+  Decrement --
+  Power **
+*/
+
+let a = 2;
+let b = 4;
+
+console.log( "a-b=", a - b )
+
+console.log( "a+b=", a + b )
+
+console.log( "a*b=", a * b )
+
+console.log( "a/b=", a / b )
+
+console.log( "a power b" , a**b )
+
+console.log( "a % b" , a % b )
+
+console.log( "b % a" , b % a )
+
+```
