@@ -1,6 +1,8 @@
 Nedir Bu Programlama Paradigmaları
 ==================================
 
+Bu dökümanı github üzerinden değiştirebilir, düzeltebilir, bu dökümana katkıda bulunabilirsin. https://github.com/HasanDelibas/books/blob/main/programlama-paradigmalar%C4%B1.md
+
 Programlama dillerinin birbirdinden nasıl ayrıldı? Programlama dillerinin türleri nelerdir? Programlama dillerinin özellikleri-**paradigmaları** nelerdir?
 
 Ön Bilgilendirme
@@ -17,19 +19,25 @@ Imperative Programming ( Emirsel Programlama )
 
 İşlemcilerin mimarileri gereği her bir saat darbesinde (clock pulse) bir işlem yapar. Bu işlemler bu adresdeki veriyi getir, bu veriyi bu adrese yaz, bu sayıyı bu sayı ile topla gibi… Bu işlemci mimarisine uygun olduğu için programlama dillerinin çoğunluğunda bu paradigma uygulanmıştır. 1964 yılında çıkan BASIC dili bunun en güzel örneklerinden biridir. İngilizceyi referans alarak geliştirilmiş. Emirsel bir dildir. İngilizcede emir kipleri cümlenin başında gelir.
 
-**_' BASIC  
-' Merhaba Dünya Yazdıran Kod_****PRINT** "Hello, World!"
+```
+' BASIC
+' Merhaba Dünya Yazdıran Kod
+PRINT "Hello, World!"
+```
 
 ️️✔️ C-Like Diller ( C, C++, C#, Java, JavaScript, PHP ) , Assembly, Python, BASIC,FORTRAN,COBOL
 
-**_// JavaScript  
-// Verilen listedeki çift elemanları ekrana yazdıran program_****const** numList = \[1, 2, 3, 4, 5, 6, 7, 8, 9, 10\];  
-**let** result = 0;  
-**for** (**let** i = 0; i < numList.length; i++) {  
-  **if** (numList\[i\] % 2 === 0) {  
-    console.log( numList\[i\] )  
-  }  
+```
+// JavaScript
+// Verilen listedeki çift elemanları ekrana yazdıran program
+const numList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let result = 0;
+for (let i = 0; i < numList.length; i++) {
+  if (numList[i] % 2 === 0) {
+    console.log( numList[i] )
+  }
 }
+```
 
 Görüldüğü gibi her komut tek tek emredilmiştir.
 
@@ -40,8 +48,11 @@ Bu paradigmada ise, nasıl yapılacağından çok ne yapılacak bize onu bildiri
 
 ✔️ SQL
 
-**_\-- MySql  
-\-- numList tablosundaki i sütünunundaki çift elemanları getir_****SELECT** i **FROM** numList **WHERE** mod(i,2) = 0
+```
+-- MySql
+-- numList tablosundaki i sütünunundaki çift elemanları getir
+SELECT i FROM numList WHERE mod(i,2) = 0
+```
 
 Non-structured Programming ( Yapısal Olmayan Programlama)
 ---------------------------------------------------------
@@ -50,26 +61,32 @@ Assembly programlama dili bu paradigmaya örnektir. İçerisinde hiç bir şekil
 
 ✔️ Assembly, ilk sürüm BASIC, ilk sürüm FORTRAN, ilk sürüm COBOL
 
-**_; Assembly  
-; ax by den büyükse X=1 değilse X=-1 'e ata._**cmp    ax, bx        
- jl     Big    
- mov    word \[X\], -1      
- jmp    Both              
-Big:   
- mov    word \[X\], 1    
+```
+; Assembly
+; ax by den büyükse X=1 değilse X=-1 'e ata.
+cmp    ax, bx      
+ jl     Big  
+ mov    word [X], -1    
+ jmp    Both            
+Big: 
+ mov    word [X], 1  
 Both:
+```
 
 İlk sürüm BASIC dilinde döngüler
 
-**_' BASIC  
-' ilk versiyon BASCI' de for olmadığı için döngüler   
-' GOTO komutu ile yapılıyordu_****Dim** x **as** **Integer** = 1  
-back:  
-**PRINT** x  
-**IF** x < 10 **THEN**  
-    x = x + 1  
-    **GOTO** back  
-**END IF**
+```
+' BASIC
+' ilk versiyon BASCI' de for olmadığı için döngüler 
+' GOTO komutu ile yapılıyordu
+Dim x as Integer = 1
+back:
+PRINT x
+IF x < 10 THEN
+    x = x + 1
+    GOTO back
+END IF
+```
 
 Görüldüğü üzere ne bi süslü parantez ne de satır aralığı blokları belirten hiçbir işaret yok. Spagetti kod dediğimiz okunaksız bir kod türüdür.
 
@@ -80,20 +97,26 @@ Yapısal programlama dilleri, if, for, fonksiyon gibi komutları bloklar halinde
 
 ✔️ C, C++, C#, Java, JavaScript, PHP, sonraki sürüm BASIC, sonraki sürüm FORTRAN, sonraki sürüm COBOL
 
-**// C, C++, C#, Java, JavaScript  
-// ax by den büyükse X=1 değilse X=-1 'e ata.****if** (ax > bx){  
-  X = 1;  
-}**else**{  
-  X = -1;  
+```
+// C, C++, C#, Java, JavaScript
+// ax by den büyükse X=1 değilse X=-1 'e ata.
+if (ax > bx){
+  X = 1;
+}else{
+  X = -1;
 }
+```
 
 Python:
 
-**// Python  
-// ax by den büyükse X=1 değilse X=-1 'e ata.****if** ax > bx:  
-  X = 1  
-**else**:  
+```
+// Python
+// ax by den büyükse X=1 değilse X=-1 'e ata.
+if ax > bx:
+  X = 1
+else:
   X = -1
+ ```
 
 Functional Programming ( Prosedürel Programlama )
 -------------------------------------------------
@@ -102,13 +125,17 @@ Bir programda tekrar eden komutları bir komutla yapmak için prosedürler kulla
 
 ✔️ C, C++,️️ Python, PHP, JavaScript, FORTRAN, COBOL
 
-**_// C, C++  
-// Kedi sesini ekrana yazdıran program_****char** \*Kedi\_Sesi(){  
-  **char** \*sesi = "Miyav";  
-  **return** sesi;  
-}**int** main(){  
-  print( Kedi\_Sesi() );  
+```
+// C, C++
+// Kedi sesini ekrana yazdıran program
+char *Kedi_Sesi(){
+  char *sesi = "Miyav";
+  return sesi;
 }
+int main(){
+  print( Kedi_Sesi() );
+}
+```
 
 Object Oriented Programming ( Nesneye Yönelik Programlama )
 -----------------------------------------------------------
@@ -117,13 +144,17 @@ Prosedürel program gibi tekrar eden komutları **metodlar** ile kullanılan par
 
 ✔️ C++,️ ️C#, Python, PHP, JavaScript, Java
 
-**_// JavaScript  
-// Kedi sesini ekrana yazdıran program_****class** Kedi{  
-  sesi(){  
-    return "Miyav"  
-  }  
-}kedi = **new** Kedi()  
+```
+// JavaScript
+// Kedi sesini ekrana yazdıran program
+class Kedi{
+  sesi(){
+    return "Miyav"
+  }
+}
+kedi = new Kedi()
 console.log ( kedi.sesi() )
+```
 
 Imperative & Functional & Object Oriented
 -----------------------------------------
@@ -131,20 +162,26 @@ Imperative & Functional & Object Oriented
 Bu üç paradigmanın farkını daha anlaşılır bir şekilde şöyle gösterebiliriz.  
 Genel kabul şu şekildedir. Burada kaynak olarak anlaşılır biçimde anlattığı için Ahmet Buğra Çakıcı’ nın videosunu gösterebilirim. [https://www.youtube.com/watch?v=uCf5hr1VJI8&t=1195s](https://www.youtube.com/watch?v=uCf5hr1VJI8&t=1195s)
 
-**_// JavaScript  
-// Kedi sesini ekrana yazdıran program_****// Imperative  
-**console.log("Miyav")**// Functional**  
-function sesVer(kedi){  
-  console.log(kedi.sesi)  
-}  
-sesVer({sesi:"Miyav"})**// Object Oriented  
-**class Kedi{  
-  constructor(){  
-    this.sesi = "Miyav"  
-  }  
-  sesVer(){  
-    console.log(this.sesi)  
-  }  
-}  
-kedi = new Kedi()  
+
+```
+// JavaScript
+// Kedi sesini ekrana yazdıran program
+// Imperative
+console.log("Miyav")
+// Functional
+function sesVer(kedi){
+  console.log(kedi.sesi)
+}
+sesVer({sesi:"Miyav"})
+// Object Oriented
+class Kedi{
+  constructor(){
+    this.sesi = "Miyav"
+  }
+  sesVer(){
+    console.log(this.sesi)
+  }
+}
+kedi = new Kedi()
 kedi.sesVer()
+```
