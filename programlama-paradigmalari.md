@@ -1,7 +1,7 @@
 Nedir Bu Programlama Paradigmaları
 ==================================
 
-Bu dökümanı github üzerinden değiştirebilir, düzeltebilir, bu dökümana katkıda bulunabilirsin. https://github.com/HasanDelibas/books/blob/main/programlama-paradigmalar%C4%B1.md
+Bu dökümanı github üzerinden değiştirebilir, düzeltebilir, bu dökümana katkıda bulunabilirsin. https://github.com/HasanDelibas/books/blob/main/programlama-paradigmalari.md
 
 Programlama dillerinin birbirdinden nasıl ayrıldı? Programlama dillerinin türleri nelerdir? Programlama dillerinin özellikleri-**paradigmaları** nelerdir?
 
